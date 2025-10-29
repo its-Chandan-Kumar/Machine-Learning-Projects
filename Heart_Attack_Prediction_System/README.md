@@ -12,7 +12,6 @@ The system helps users and healthcare professionals quickly assess cardiovascula
 
 ## 📖 Overview
 The **Heart Attack Prediction System** takes several health-related inputs — such as age, cholesterol level, resting blood pressure, heart rate, and other diagnostic parameters — and uses a machine learning model to predict whether a person is likely to have a heart attack.
-
 This app is fully interactive and runs directly in the browser through Streamlit.
 
 ## 🧠 Machine Learning Model
@@ -22,7 +21,7 @@ This app is fully interactive and runs directly in the browser through Streamlit
   - `KNN_HAPS.pkl` — trained KNN classifier
   - `scaler.pkl` — `StandardScaler` used for feature normalization
   - `columns.pkl` — stores the expected column structure used during training
-- **Frameworks:** Scikit-learn, Pandas, NumPy
+- **Libraries Used:** Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Streamlit
 
 The model was trained using the **UCI Heart Disease Dataset** (`heart.csv`) and tuned for balanced performance between sensitivity and specificity.
 
@@ -56,11 +55,7 @@ The model was trained using the **UCI Heart Disease Dataset** (`heart.csv`) and 
 | CA | Number of major vessels (0–4) |
 | Thalassemia | 1 = Normal, 2 = Fixed defect, 3 = Reversible defect |
 
----
 
-## ⚙️ Installation and Setup
+<img width="574" height="828" alt="image" src="https://github.com/user-attachments/assets/4092f9fe-d3a7-4104-964e-b8d9033cacd3" />
+<img width="574" height="828" alt="Heart Attack Prediction System ❤️" src="https://github.com/user-attachments/assets/76d379b1-83a4-437b-b061-f29f8dd4a9b0" />
 
-### 1️⃣ Clone this repository
-```bash
-git clone https://github.com/your-username/heart-attack-prediction-system.git
-cd heart-attack-prediction-system
