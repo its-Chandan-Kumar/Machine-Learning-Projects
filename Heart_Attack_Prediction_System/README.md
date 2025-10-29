@@ -57,7 +57,8 @@ The model was trained using the **UCI Heart Disease Dataset** (`heart.csv`) and 
 | Oldpeak | ST depression induced by exercise |
 | Slope | 0–2, slope of peak exercise ST segment |
 
+---
+## 📸 Screenshot of the App
 
 <img width="574" height="828" alt="Heart Attack Prediction System ❤️" src="https://github.com/user-attachments/assets/76d379b1-83a4-437b-b061-f29f8dd4a9b0" />
-<img width="482" height="795" alt="image" src="https://github.com/user-attachments/assets/45ee1d4c-848b-465d-acac-81a93cc4f98a" />
 
