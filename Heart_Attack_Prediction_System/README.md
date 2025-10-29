@@ -5,17 +5,15 @@ It is built using **Python**, **Streamlit**, and a trained **K-Nearest Neighbors
 
 The system helps users and healthcare professionals quickly assess cardiovascular risk using simple health indicators.
 
-## 🚀 Live Demo
 
-👉 (https://chandankumar-heart-attack-prediction-system.streamlit.app)  
+## 🚀 Live Demo
+👉 https://chandankumar-heart-attack-prediction-system.streamlit.app
+
 
 ## 📖 Overview
-
 The **Heart Attack Prediction System** takes several health-related inputs — such as age, cholesterol level, resting blood pressure, heart rate, and other diagnostic parameters — and uses a machine learning model to predict whether a person is likely to have a heart attack.
 
 This app is fully interactive and runs directly in the browser through Streamlit.
-
----
 
 ## 🧠 Machine Learning Model
 
