@@ -7,7 +7,7 @@ The system helps users and healthcare professionals quickly assess cardiovascula
 
 ## 🚀 Live Demo
 
-👉 [**View the deployed app on Streamlit Cloud**](https://chandankumar-heart-attack-prediction-system.streamlit.app)  
+👉 (https://chandankumar-heart-attack-prediction-system.streamlit.app)  
 
 ## 📖 Overview
 
