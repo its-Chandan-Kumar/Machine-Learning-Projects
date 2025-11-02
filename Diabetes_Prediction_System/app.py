@@ -8,7 +8,7 @@ import joblib
 # Load Model
 # ==============================
 try:
-    model = joblib.load('model\lightgbm_model.pkl')
+    model = joblib.load('model/lightgbm_model.pkl')
 except:
     st.error("Model file not found.")
     st.stop()
@@ -88,4 +88,5 @@ if st.button('Predict'):
              st.success("The person is unlikely to have Diabetes 😊")
     except Exception as e:
         st.error(f"⚠️ Error during prediction: {e}")
+
 # ==============================
