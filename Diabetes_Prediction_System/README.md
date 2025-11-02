@@ -1,23 +1,18 @@
 # 🩺 Diabetes Prediction System  
 
-An interactive **Machine Learning web application** that predicts whether a person is likely to have **diabetes** based on key medical attributes such as glucose level, blood pressure, insulin, BMI, and age.  
-The system uses a trained **LightGBM Classifier** model and is deployed using **Streamlit** for a simple, browser-based interface.  
+A **Machine Learning-based web application** that predicts the likelihood of **Diabetes** based on key medical parameters such as glucose level, blood pressure, insulin, BMI, and age.  
+The system uses a trained **LightGBM Classifier** and is deployed using **Streamlit Cloud** for an interactive, browser-based experience.  
+
+🔗 **Live App:** https://chandankumar-diabetes-prediction-system.streamlit.app/ 
 
 ---
 
-## 🚀 Live Demo
-
-👉 
-
----
 ## 📘 Overview  
-Diabetes is one of the most common chronic diseases worldwide.  
-Early prediction can help individuals take preventive measures and make informed health decisions.  
 
-This project aims to:
-- Analyze health parameters of a patient  
-- Train a machine learning model to predict diabetes likelihood  
-- Provide a user-friendly web interface for real-time predictions  
+This project is designed to assist in the early detection of diabetes using patient health data.  
+It processes user inputs, runs them through a trained model, and instantly displays whether the person is **likely diabetic or not**.  
+
+The model is built using the **Pima Indians Diabetes Dataset**, a widely used dataset for medical prediction tasks.  
 
 ---
 
@@ -25,7 +20,7 @@ This project aims to:
 | Category | Tools / Libraries |
 |-----------|------------------|
 | **Programming Language** | Python |
-| **Data Analysis** | Pandas, NumPy |
+| **Data Handling** | Pandas, NumPy |
 | **Visualization** | Matplotlib, Seaborn |
 | **Machine Learning** | Scikit-learn, LightGBM, Imbalanced-learn |
 | **Model Deployment** | Streamlit |
@@ -33,59 +28,59 @@ This project aims to:
 
 ---
 
-## 📂 Dataset Information  
-**Dataset Name:** Pima Indians Diabetes Database  
-**Source:** [Kaggle Dataset](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)  
-**Rows:** 768  
-**Target Column:** `Outcome` (1 = Diabetic, 0 = Non-Diabetic)
+## 🧠 Model Details  
+- **Algorithm:** LightGBM Classifier  
+- **Accuracy:** ~85%  
+- **Model File:** `lightgbm_model.pkl`  
+- **Balanced Using:** SMOTE (Synthetic Minority Over-sampling Technique)  
 
-### Features Used
+---
+
+## 📊 Dataset Information  
+**Dataset:** Pima Indians Diabetes Database  
+**Source:** https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database  
+**Target Variable:** `Outcome` → (1 = Diabetic, 0 = Non-Diabetic)
+
+### Features Used:
 | Feature | Description |
 |----------|-------------|
 | Pregnancies | Number of times pregnant |
 | Glucose | Plasma glucose concentration |
-| BloodPressure | Diastolic blood pressure (mm Hg) |
-| SkinThickness | Triceps skinfold thickness (mm) |
+| BloodPressure | Diastolic blood pressure |
+| SkinThickness | Triceps skinfold thickness |
 | Insulin | Serum insulin (μU/ml) |
 | BMI | Body Mass Index |
-| DiabetesPedigreeFunction | Family history of diabetes |
-| Age | Age of the patient (years) |
+| DiabetesPedigreeFunction | Family history function |
+| Age | Age of the patient |
 
 ---
 
-## 🧠 Model Training Steps  
-1. **Data Preprocessing**  
-   - Replaced zero values in key features with statistical measures (mean/median).  
-   - Removed outliers and invalid entries.  
+## 🧩 Project Workflow  
 
-2. **Exploratory Data Analysis (EDA)**  
-   - Visualized feature distributions and correlations.  
-   - Created new categorical features for Glucose, Age, and BMI ranges.  
+### 1. **Data Preprocessing**
+- Replaced invalid zero values with mean/median values.  
+- Removed outliers and unrealistic entries.  
 
-3. **Data Balancing**  
-   - Used **SMOTE** (Synthetic Minority Over-sampling Technique) to balance diabetic and non-diabetic samples.  
+### 2. **Feature Engineering**
+- Created additional categorical features for BMI, glucose, and age (for analysis).  
 
-4. **Model Selection and Training**  
-   - Tried ensemble algorithms.  
-   - **LightGBM Classifier** performed best with an accuracy of **83–85%**.  
+### 3. **Data Balancing**
+- Used **SMOTE** to handle class imbalance between diabetic and non-diabetic samples.  
 
-5. **Model Evaluation**  
-   - Evaluated using accuracy, precision, recall, F1-score, and confusion matrix.  
-   - Saved the trained model using `joblib` for deployment.  
+### 4. **Model Training**
+- Trained multiple ensemble models.  
+- **LightGBM** achieved the best accuracy (~85%).  
 
----
+### 5. **Evaluation**
+- Measured performance using accuracy, recall, precision, and F1-score.  
 
-## 📊 Model Performance  
-| Metric | Score |
-|---------|--------|
-| Accuracy | 83% |
-| Precision | 82% |
-| Recall | 84% |
-| F1-Score | 83% |
+### 6. **Deployment**
+- Model exported using `joblib`.  
+- Deployed with **Streamlit Cloud** for real-time predictions.
 
 ---
 
-## 💾 Model Saving  
-The trained model was saved as:  
+## 💾 Model Saving
 ```python
+import joblib
 joblib.dump(lgbm, 'lightgbm_model.pkl')
