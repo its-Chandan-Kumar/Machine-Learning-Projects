@@ -82,7 +82,7 @@ It should **not** be used for medical diagnosis.
 # ==========================================================
 # Main Title and Inputs
 # ==========================================================
-st.title("🩺 Diabetes Prediction App")
+st.title("🩺 Diabetes Prediction System")
 st.markdown('by Chandan Kumar')
 st.header('Please provide the following details')
 
@@ -112,3 +112,4 @@ if st.button('Predict'):
     except Exception as e:
 
         st.error(f"⚠️ Error during prediction: {e}")
+
