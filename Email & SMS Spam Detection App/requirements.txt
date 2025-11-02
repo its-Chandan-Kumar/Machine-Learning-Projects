@@ -1,8 +1,8 @@
-streamlit==1.38.0
-pandas==2.2.2
-numpy==1.26.4
-scikit-learn==1.5.2
-nltk==3.9.1
-joblib==1.4.2
-protobuf==5.28.2
-altair==5.3.0
+streamlit
+pandas
+numpy
+scikit-learn
+nltk
+joblib
+protobuf
+altair
