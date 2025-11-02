@@ -9,6 +9,8 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
+nltk.download('punkt')
+nltk.download('stopwords')
 
 # Initialize Porter Stemmer for text stemming
 ps = PorterStemmer()
@@ -168,4 +170,5 @@ The main goal of this project is to demonstrate how **Machine Learning and NLP**
 
 ---
 """)
+
 
