@@ -8,7 +8,7 @@ import joblib
 # Load Model
 # ==============================
 try:
-    model = joblib.load('model/lightgbm_model.pkl')
+    model = joblib.load('model\lightgbm_model.pkl')
 except:
     st.error("Model file not found.")
     st.stop()
@@ -90,3 +90,4 @@ if st.button('Predict'):
         st.error(f"⚠️ Error during prediction: {e}")
 
 # ==============================
+
