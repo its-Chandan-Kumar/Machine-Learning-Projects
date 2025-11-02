@@ -4,6 +4,13 @@ import pandas as pd
 import pickle
 from pathlib import Path
 
+# --- PAGE CONFIG ---
+st.set_page_config(
+    page_title="Heart Attack Prediction System",
+    page_icon="💓",
+    layout="centered"
+)
+
 # ------------------------------
 # Safe loading of model files
 # ------------------------------
@@ -39,7 +46,70 @@ expected_columns = load_pickle(columns_path, "columns.pkl")
 # Streamlit UI 
 # ------------------------------
 
-st.set_page_config(page_title="Heart Attack Prediction System ❤️", page_icon="❤️", layout="centered")
+# --- SIDEBAR: PROJECT & MODEL INFORMATION ---
+st.sidebar.title("📊 Project Information")
+
+st.sidebar.markdown("""
+## 🩺 Heart Attack Prediction System
+This web application predicts the **likelihood of a heart attack** based on a person’s health data.
+
+---
+
+### 📘 Dataset Information
+- **Dataset Source:** UCI Machine Learning Repository  
+- **Dataset Name:** Heart Disease Dataset  
+- **Total Records:** 303  
+- **Features:** 13  
+- **Target Variable:**  
+  `1 = Heart Disease`  
+  `0 = No Heart Disease`
+
+**Features Used:**
+- Age  
+- Sex  
+- Chest Pain Type  
+- Resting Blood Pressure  
+- Serum Cholesterol  
+- Fasting Blood Sugar  
+- Resting ECG Results  
+- Maximum Heart Rate Achieved  
+- Exercise Induced Angina  
+- ST Depression (Oldpeak)  
+- Slope of Peak Exercise  
+- Number of Major Vessels (Ca)  
+- Thalassemia Type  
+
+---
+
+### 🤖 Model Details
+- **Algorithm:** K-Nearest Neighbors (KNN)  
+- **Scaler Used:** StandardScaler  
+- **Training/Test Split:** 80% / 20%  
+- **Accuracy:** ~85%  
+- **Precision:** ~84%  
+- **Recall:** ~86%  
+- **F1 Score:** ~85%
+
+The KNN model was chosen for its reliability and simplicity in classifying heart disease based on patient metrics.
+
+---
+
+### ⚙️ Technologies Used
+- **Language:** Python  
+- **Framework:** Streamlit  
+- **Libraries:** Pandas, NumPy, Scikit-learn, Joblib  
+- **Model Storage:** `.pkl` files  
+
+---
+
+### 📈 Objective
+The goal of this project is to **predict the risk of heart attack** using clinical parameters.  
+This tool is designed for **educational and demonstration** purposes to understand ML model behavior in healthcare.
+
+---
+""")
+
+# st.set_page_config(page_title="Heart Attack Prediction System ❤️", page_icon="❤️", layout="centered")
 
 st.title("Heart Attack Prediction System ❤️")
 st.markdown('by Chandan Kumar')
