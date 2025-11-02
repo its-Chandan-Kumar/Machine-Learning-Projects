@@ -29,6 +29,16 @@ except Exception as e:
 
 
 # ==========================================================
+# Fevicon
+# ==========================================================
+st.set_page_config(
+    page_title="Diabetes Prediction System",
+    page_icon="🩺",  # You can use an emoji or an image file
+    layout="centered"
+)
+
+
+# ==========================================================
 # Sidebar Information
 # ==========================================================
 st.sidebar.title("📊 About This App")
@@ -100,4 +110,5 @@ if st.button('Predict'):
         else:
              st.success("The person is unlikely to have Diabetes 😊")
     except Exception as e:
+
         st.error(f"⚠️ Error during prediction: {e}")
