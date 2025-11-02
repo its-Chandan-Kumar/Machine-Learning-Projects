@@ -1,16 +1,13 @@
-# Import Libraries
-# ==============================
-import streamlit as st
-import numpy as np
+import os
 import joblib
-# ==============================
+import streamlit as st
 
-# Load Model
-# ==============================
-try:
-    model = joblib.load('model/lightgbm_model.pkl')
-except:
-    st.error("Model file not found.")
+MODEL_PATH = 'model/lightgbm_model.pkl'
+
+if os.path.exists(MODEL_PATH):
+    model = joblib.load(MODEL_PATH)
+else:
+    st.error("Model file not found. Please ensure 'lightgbm_model.pkl' is in the app directory.")
     st.stop()
 # ==============================
 
@@ -90,6 +87,7 @@ if st.button('Predict'):
         st.error(f"⚠️ Error during prediction: {e}")
 
 # ==============================
+
 
 
 
