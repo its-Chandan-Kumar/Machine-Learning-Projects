@@ -6,13 +6,13 @@ import os
 st.set_page_config(page_title="Laptop Price Predictor", page_icon="💻")
 
 # --- File paths ---
-pipe_path = os.path.join("laptop\pipe.pkl")
-df_path = os.path.join("laptop\df.pkl")
+pipe_path = os.path.join("laptop/pipe.pkl")
+df_path = os.path.join("laptop/df.pkl")
 
 # --- Check if model files exist ---
 if not os.path.exists(pipe_path) or not os.path.exists(df_path):
     st.error("Model files not found. Please make sure 'pipe.pkl' and 'df.pkl' are in the same folder as this script.")
-    st.stop()
+    # st.stop()
 
 # --- Load model and dataframe ---
 with open(pipe_path, "rb") as f:
@@ -55,4 +55,5 @@ if st.button("Predict Price"):
 
     predicted_price = int(np.exp(pipe.predict(query)[0]))
     st.success(f"💰 Estimated Price: ₹{predicted_price:,}")
+
 
