@@ -5,13 +5,13 @@ import os
 
 st.set_page_config(page_title="Laptop Price Predictor", page_icon="💻")
 
-# --- File paths (use forward slashes for Linux/Streamlit Cloud) ---
-pipe_path = "laptop/pipe.pkl"
-df_path = "laptop/df.pkl"
+# --- File paths ---
+pipe_path = os.path.join("pipe.pkl")
+df_path = os.path.join("df.pkl")
 
 # --- Check if model files exist ---
 if not os.path.exists(pipe_path) or not os.path.exists(df_path):
-    st.error("Model files not found. Please make sure 'pipe.pkl' and 'df.pkl' are in the 'laptop' folder.")
+    st.error("Model files not found. Please make sure 'pipe.pkl' and 'df.pkl' are in the same folder as this script.")
     st.stop()
 
 # --- Load model and dataframe ---
@@ -55,5 +55,3 @@ if st.button("Predict Price"):
 
     predicted_price = int(np.exp(pipe.predict(query)[0]))
     st.success(f"💰 Estimated Price: ₹{predicted_price:,}")
-
-
