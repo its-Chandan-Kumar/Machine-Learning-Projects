@@ -7,15 +7,15 @@ import os
 st.set_page_config(page_title="Laptop Price Predictor", page_icon="💻")
 
 # Check if model files exist
-if not os.path.exists("pipe.pkl") or not os.path.exists("df.pkl"):
+if not os.path.exists("laptop\pipe.pkl") or not os.path.exists("laptop\df.pkl"):
     st.error("Model files not found. Please make sure 'pipe.pkl' and 'df.pkl' are in the same directory.")
     st.stop()
 
 # Load model and dataframe
-with open("pipe.pkl", "rb") as f:
+with open("laptop\pipe.pkl", "rb") as f:
     pipe = pickle.load(f)
 
-with open("df.pkl", "rb") as f:
+with open("laptop\df.pkl", "rb") as f:
     df = pickle.load(f)
 
 st.title("💻 Laptop Price Predictor")
@@ -77,3 +77,4 @@ if st.button("Predict Price"):
     predicted_price = int(np.exp(pipe.predict(query)[0]))
 
     st.success(f"💰 Estimated Price: ₹{predicted_price:,}")
+
