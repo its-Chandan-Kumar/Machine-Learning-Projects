@@ -1,10 +1,15 @@
+import os
 import streamlit as st
+import pickle
 import numpy as np
-import pickle 
 
-# Import the model
+if not os.path.exists('pipe.pkl') or not os.path.exists('df.pkl'):
+    st.error("Model files not found. Please ensure 'pipe.pkl' and 'df.pkl' are in the same directory.")
+    st.stop()
+
 pipe = pickle.load(open('pipe.pkl', 'rb'))
-df = pickle.load(open('df.pkl','rb'))
+df = pickle.load(open('df.pkl', 'rb'))
+
 
 st.title("Laptop Price Predictor")
 
@@ -69,4 +74,5 @@ if st.button('Predict Price'):
     query = query.reshape(1,12)
     predicted_price = int(np.exp(pipe.predict(query)[0]))
     st.title(f'Predicted price of this configuration is: {predicted_price}')
+
     
