@@ -6,8 +6,8 @@ import os
 st.set_page_config(page_title="Laptop Price Predictor", page_icon="💻")
 
 # --- File paths (use forward slashes for Linux/Streamlit Cloud) ---
-pipe_path = "laptop/pipe.pkl"
-df_path = "laptop/df.pkl"
+pipe_path = "laptop\pipe.pkl"
+df_path = "laptop\df.pkl"
 
 # --- Check if model files exist ---
 if not os.path.exists(pipe_path) or not os.path.exists(df_path):
@@ -55,3 +55,4 @@ if st.button("Predict Price"):
 
     predicted_price = int(np.exp(pipe.predict(query)[0]))
     st.success(f"💰 Estimated Price: ₹{predicted_price:,}")
+
