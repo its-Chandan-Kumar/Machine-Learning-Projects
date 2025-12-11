@@ -1,10 +1,14 @@
-import streamlit as st
-import numpy as np
+import os
 import pickle
 
-# Load Model & Encoder
-model = pickle.load(open("crop_model.pkl", "rb"))
-le = pickle.load(open("label_encoder.pkl", "rb"))
+MODEL_PATH = os.path.join(os.path.dirname(__file__), "crop_model.pkl")
+ENCODER_PATH = os.path.join(os.path.dirname(__file__), "label_encoder.pkl")
+
+with open(MODEL_PATH, "rb") as f:
+    model = pickle.load(f)
+
+with open(ENCODER_PATH, "rb") as f:
+    le = pickle.load(f)
 
 # ------------------------------
 # SIDEBAR SECTION
@@ -67,3 +71,4 @@ if st.button("🔍 Recommend Crop"):
     crop_name = str.title(le.inverse_transform([pred_num])[0])
 
     st.success(f"🌾 Recommended Crop: **{crop_name}**")
+
