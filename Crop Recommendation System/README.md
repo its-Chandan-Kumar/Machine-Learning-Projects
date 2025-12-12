@@ -49,6 +49,7 @@ The model was trained using the Crop Recommendation Dataset from Kaggle and fine
 
 ## 📊 Input Parameters
 | Parameter | Description |
+|------------|-------------|
 | N	Nitrogen | content in soil |
 | P	Phosphorus | content in soil |
 | K	Potassium | content in soil |
