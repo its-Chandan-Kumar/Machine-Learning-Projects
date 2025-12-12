@@ -7,19 +7,19 @@ The system helps farmers and agricultural experts make informed decisions by rec
 
 ---
 
-# 🚀 Live Demo
+## 🚀 Live Demo
 👉 https://crop-recommendation-system-7ta3.onrender.com/
 
 ---
 
-# 📖 Overview
+## 📖 Overview
 
 The Crop Recommendation System takes several soil-related inputs — such as Nitrogen (N), Phosphorus (P), Potassium (K), temperature, humidity, soil pH, and rainfall — and uses a machine learning model to suggest the best crop to grow.
 This improves agricultural productivity and assists in data-driven decision-making.
 
 ---
 
-# 🧠 Machine Learning Model
+## 🧠 Machine Learning Model
 
 Algorithm Used: Decision Tree Classifier
 Model Files:
@@ -37,7 +37,7 @@ The model was trained using the Crop Recommendation Dataset from Kaggle and fine
 
 ---
 
-# 🩺 Features
+## 🩺 Features
 ✅ Interactive Streamlit web interface
 ✅ Real-time crop prediction using ML model
 ✅ Encoded label decoding applied automatically
@@ -47,17 +47,19 @@ The model was trained using the Crop Recommendation Dataset from Kaggle and fine
 
 ---
 
-# 📊 Input Parameters
-Parameter	Description
-N	Nitrogen content in soil
-P	Phosphorus content in soil
-K	Potassium content in soil
-Temperature	Temperature in °C
-Humidity	Relative humidity (%)
-pH	Soil pH level
-Rainfall	Annual rainfall (mm)
+## 📊 Input Parameters
+| Parameter | Description |
+| N	Nitrogen | content in soil |
+| P	Phosphorus | content in soil |
+| K	Potassium | content in soil |
+| Temperature | Temperature in °C |
+| Humidity | Relative humidity (%) |
+| pH | Soil pH level |
+| Rainfall |	Annual rainfall (mm) |
 
-📸 Screenshot of the App
+---
+
+## 📸 Screenshot of the App
 <img width="770" height="773" alt="image" src="https://github.com/user-attachments/assets/f3482ff5-c7b8-4248-83b7-eec7fdc7e960" />
 
 
