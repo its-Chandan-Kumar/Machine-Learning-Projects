@@ -45,6 +45,12 @@ The model was trained using the Crop Recommendation Dataset from Kaggle and fine
 ✅ Easy deployment on Render or Streamlit Cloud
 ✅ Trained on real agricultural dataset
 
+✅ Interactive Streamlit web interface  
+✅ Real-time predictions with a trained KNN model  
+✅ Automatically scales input data before prediction  
+✅ Deployed seamlessly on Streamlit Cloud  
+✅ Lightweight and responsive UI 
+
 ---
 
 ## 📊 Input Parameters
