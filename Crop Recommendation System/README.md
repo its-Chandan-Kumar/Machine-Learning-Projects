@@ -38,11 +38,11 @@ The model was trained using the Crop Recommendation Dataset from Kaggle and fine
 ---
 
 ## 🩺 Features
-✅ Interactive Streamlit web interface  
-✅ Real-time crop prediction using ML model
-✅ Encoded label decoding applied automatically
-✅ Trained on real agricultural dataset
-✅ Lightweight and responsive UI 
+- Interactive Streamlit web interface
+- Real-time crop prediction using ML model
+- Encoded label decoding applied automatically
+- Trained on real agricultural dataset
+- Lightweight and responsive UI 
 
 ---
 
