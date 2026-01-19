@@ -69,6 +69,6 @@ rainfall = st.number_input("Rainfall (mm)", 0.0, 400.0,value=80.6)
 if st.button("🔍 Recommend Crop"):
     features = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
     pred_num = model.predict(features)
-    crop_name = str.title(le.inverse_transform([pred_num])[0])
+    crop_name = str.title(le.inverse_transform([pred_num]))
 
     st.success(f"🌾 Recommended Crop: **{crop_name}**")
