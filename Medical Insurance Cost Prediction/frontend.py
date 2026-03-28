@@ -30,7 +30,7 @@ if st.button("Predict Medical Insurance"):
         response = requests.post(API_URL, json=input_data)
         if response.status_code==200:
             result = response.json()
-            st.success(f"Your Predicted Medical Insurance Price: ₹{result['Predicted Insurance Cost']:.2f}")
+            st.success(f"Your Predicted Medical Insurance Price: ₹{result['prediction']:.2f}")
         else:
             st.error(f'API Error: {response.status_code} - {response.text}')
     except requests.exceptions.ConnectionError:
