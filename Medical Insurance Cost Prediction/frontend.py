@@ -4,7 +4,7 @@ import requests
 # 🔥 Your EC2 FastAPI URL
 API_URL = "http://13.201.28.130:8000/predict"
 
-st.title("Medical Insurance Price Predictor")
+st.title("~Medical Insurance Price Predictor")
 st.markdown("Please provide your details below:")
 
 # ✅ Input Fields
