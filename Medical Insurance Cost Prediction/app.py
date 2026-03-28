@@ -47,6 +47,4 @@ def predict_premium(data: UserInput):
 
     prediction = model.predict(input_df)[0]
 
-    return {"Predicted Insurance Cost": float(prediction)}
-
-    # return JSONResponse(status_code=200, content={'Predicted Category':prediction})
+    return {"prediction": float(prediction)}
